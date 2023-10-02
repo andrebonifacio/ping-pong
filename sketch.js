@@ -27,7 +27,7 @@ function draw() {
   verificaColisaoBorda();
   mostraRaquete();
   movimentaMinhaRaquete();
-  //verificaColisaoRaquete();
+  verificaColisaoRaquete();
   colisaoMinhaRaqueteBiblioteca();
   
  
@@ -77,7 +77,7 @@ function verificaColisaoRaquete(){
 
 function colisaoMinhaRaqueteBiblioteca() {
   colidiu = 
-  collideRectCircle(xRaquete, yRaquete, raqueteComprimento, raqueteAltura,xBolinha, yBolinha, raio);
+  verificaColisaoRaquete(xRaquete, yRaquete, raqueteComprimento, raqueteAltura,xBolinha, yBolinha, raio);
   if (colidiu) {
     velocidadeXBolinha *= -1
   }
